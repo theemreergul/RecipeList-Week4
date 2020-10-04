@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private ArrayList<String> mRecipes= new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
+    private ArrayList<String> mRecipes=new ArrayList<>();
+    private ArrayList<String> mImages=new ArrayList<>();
     private ArrayList<String> mTexts=new ArrayList<>();
     private Context mContext;
     public RecyclerViewAdapter(Context context,ArrayList<String> recipes, ArrayList<String> images,ArrayList<String> texts){
@@ -24,7 +24,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         mTexts=texts;
         mContext=context;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -47,14 +46,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 mContext.startActivity(intent);
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
         return mTexts.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView recipe;
         TextView text;

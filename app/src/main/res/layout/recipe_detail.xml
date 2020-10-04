@@ -11,17 +11,26 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:contentDescription="@string/recipeimg"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/bottom_bar" />
 
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#FF1A1A"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 </LinearLayout>
