@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecipeList-Week4</string>
+    <string name="recipeimg">recipeImg</string>
 </resources>

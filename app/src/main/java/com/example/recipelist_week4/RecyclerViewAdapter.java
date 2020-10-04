@@ -34,9 +34,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.recipe.setText(mRecipes.get(position));
         holder.text.setText(mTexts.get(position));
+        holder.pLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,RecipeDetails.class);
+                intent.putExtra("recipe_title",mRecipes.get(position));
+                intent.putExtra("recipe_details",mTexts.get(position));
+                intent.putExtra("recipe_image",mImages.get(position));
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
