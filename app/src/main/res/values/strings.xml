@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">RecipeList-Week4</string>
     <string name="recipeimg">RecipeImg</string>
+    <string name="title_foodrecipe_list">FoodRecipes</string>
+    <string name="title_foodrecipe_detail">FoodRecipe Detail</string>
 
 </resources>
